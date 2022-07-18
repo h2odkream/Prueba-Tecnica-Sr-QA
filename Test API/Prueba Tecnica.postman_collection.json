@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "09ee9773-3134-4f26-bd89-7493a97466b0",
+		"name": "Prueba Tecnica",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Metodo get Query params",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://postman-echo.com/get?test=value&other=33",
+					"protocol": "https",
+					"host": [
+						"postman-echo",
+						"com"
+					],
+					"path": [
+						"get"
+					],
+					"query": [
+						{
+							"key": "test",
+							"value": "value"
+						},
+						{
+							"key": "other",
+							"value": "33"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Metodo get from body",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"test\":\"value\",\r\n\"other\":33\r\n}"
+				},
+				"url": {
+					"raw": "https://postman-echo.com/get",
+					"protocol": "https",
+					"host": [
+						"postman-echo",
+						"com"
+					],
+					"path": [
+						"get"
+					],
+					"query": [
+						{
+							"key": "test",
+							"value": "value",
+							"disabled": true
+						},
+						{
+							"key": "other",
+							"value": "33",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Metodo post Query params",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://postman-echo.com/post?name=Karen Agualimpia&email=kagualim@weelo.com&phone=321468",
+					"protocol": "https",
+					"host": [
+						"postman-echo",
+						"com"
+					],
+					"path": [
+						"post"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "Karen Agualimpia"
+						},
+						{
+							"key": "email",
+							"value": "kagualim@weelo.com"
+						},
+						{
+							"key": "phone",
+							"value": "321468"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Metodo post from body",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Karen Agualimpia\",\r\n    \"email\":\"kagualim@weelo.com\",\r\n    \"phone\":32145678\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://postman-echo.com/post",
+					"protocol": "https",
+					"host": [
+						"postman-echo",
+						"com"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

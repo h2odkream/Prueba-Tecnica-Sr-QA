@@ -1,0 +1,271 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/font/bootstrap-icons.css"><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.11.3/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.11.3/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.11.3/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="ef986866a2a53f4067a6fe9ac4e2c64ed2367c5ccf7083ee5ba257ffc5f401ed.html">Fill Text Information The Tool QA</a></span>
+                > <span class="truncate-60"><a
+                    href="2bf777376a553fa1e13b07f3a52c31c5e1eb7258577128b67494564521e4abbe.html">Fill out the student registration form </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="7ea0a5e2d679b9deeda9910ae4a9bcd3a281e0d908303a9e16e486103e98880c.html"><i class="bi bi-chat-text"></i> Capabilities</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 18-07-2022 08:42</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Fill Text Information The Tool QA </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Fill out the student registration form
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Given user accesses the website<br>When he enters all information<br><table class='embedded'><tbody><tr><td>&lt;firstaName&gt;</td><td>&lt;lastName&gt;</td><td>&lt;email&gt;</td><td>&lt;gender&gt;</td><td>&lt;mobile&gt;</td><td>&lt;subject&gt;</td><td>&lt;hobbie&gt;</td><td>&lt;month&gt;</td><td>&lt;year&gt;</td><td>&lt;day&gt;</td><td>&lt;address&gt;</td><td>&lt;state&gt;</td><td>&lt;city&gt;</td><td>&lt;path&gt;</td></tr></tbody></table><br>Then he should see a submiting message</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="5bb47ccb4f505c42bcdbfbf6fed725a63ed510d80badfd042e60993224ee1257.png" title=" 1: Fill out the student registration form ({firstaName=Karen, lastName=Agualimpia, email=kagualim@weel.com, gender=Female, mobile=3211234567, subject=Maths, hobbie=Sports, month=February, year=1995, day=08, address=calle 3 casa 4, state=Uttar Pradesh, city=Lucknow, path=MillionAndUp.png})" width="1920"/>
+                <img src="5bb47ccb4f505c42bcdbfbf6fed725a63ed510d80badfd042e60993224ee1257.png" title=" Given user accesses the website" width="1920"/>
+                <img src="f05e116ae2d1dada8c9fd2a976fb406c6ff84438021ae9f825ca5ee6fa4effc3.png" title=" When he enters all information
+| Karen | Agualimpia | kagualim@weel.com | Female | 3211234567 | Maths | Sports | February | 1995 | 08 | calle 3 casa 4 | Uttar Pradesh | Lucknow | MillionAndUp.png |" width="1920"/>
+                <img src="f05e116ae2d1dada8c9fd2a976fb406c6ff84438021ae9f825ca5ee6fa4effc3.png" title=" Karen fill out" width="1920"/>
+                <img src="f05e116ae2d1dada8c9fd2a976fb406c6ff84438021ae9f825ca5ee6fa4effc3.png" title=" Karen clicks on First name" width="1920"/>
+                <img src="e5386fb6f4e82257c0081b45d2302ee61a6d05b37be066c227dad98c09170a88.png" title=" Karen clicks on First name (completed)" width="1920"/>
+                <img src="e5386fb6f4e82257c0081b45d2302ee61a6d05b37be066c227dad98c09170a88.png" title=" Karen enters 'Karen' into First name" width="1920"/>
+                <img src="0ff0033d98f0fac98735ffd34a2bf61899c768a9a1272045bbc402c067792295.png" title=" Karen enters 'Karen' into First name (completed)" width="1920"/>
+                <img src="0ff0033d98f0fac98735ffd34a2bf61899c768a9a1272045bbc402c067792295.png" title=" Karen clicks on Last names" width="1920"/>
+                <img src="c9b112d1fa1d787598af6f30d0c47b221855e533eb284e34cf0b1fb6e5a959b9.png" title=" Karen clicks on Last names (completed)" width="1920"/>
+                <img src="c9b112d1fa1d787598af6f30d0c47b221855e533eb284e34cf0b1fb6e5a959b9.png" title=" Karen enters 'Agualimpia' into Last names" width="1920"/>
+                <img src="1acede0eaa1258cc9979d8042da7494e6024b7945d57fbb5e8fcd5ef9fb9aa38.png" title=" Karen enters 'Agualimpia' into Last names (completed)" width="1920"/>
+                <img src="1acede0eaa1258cc9979d8042da7494e6024b7945d57fbb5e8fcd5ef9fb9aa38.png" title=" Karen clicks on Name of student" width="1920"/>
+                <img src="421c0ac9e293de65afec9e3bbc31096fff9ff1d32d766abc7a6a1db49901a196.png" title=" Karen clicks on Name of student (completed)" width="1920"/>
+                <img src="0c5d5caa039b26f15591b65897a6b53f8ff36b05218691228d6be1d780659fe7.png" title=" Karen enters 'kagualim@weel.com' into Name of student" width="1920"/>
+                <img src="572498d36e26e0d977a968597535b321d78b4358dd9999b1ac5af993fcb04b43.png" title=" Karen enters 'kagualim@weel.com' into Name of student (completed)" width="1920"/>
+                <img src="572498d36e26e0d977a968597535b321d78b4358dd9999b1ac5af993fcb04b43.png" title=" Karen clicks on Name of student" width="1920"/>
+                <img src="1a584bc656ec111a232515d724b7e66cb2b08d44d599b589e8ddc5c11efeddb0.png" title=" Karen clicks on Name of student (completed)" width="1920"/>
+                <img src="1a584bc656ec111a232515d724b7e66cb2b08d44d599b589e8ddc5c11efeddb0.png" title=" Karen clicks on Name of student" width="1920"/>
+                <img src="e9a98ae5d2ed2acf2467d7871aafc7566631074d305e44ace082c4947f87cfb8.png" title=" Karen clicks on Name of student (completed)" width="1920"/>
+                <img src="e9a98ae5d2ed2acf2467d7871aafc7566631074d305e44ace082c4947f87cfb8.png" title=" Karen enters '3211234567' into Name of student" width="1920"/>
+                <img src="525c19165cc47621dd5ccb784bc859a2d722697953117ccd587dccd1b45a8145.png" title=" Karen enters '3211234567' into Name of student (completed)" width="1920"/>
+                <img src="525c19165cc47621dd5ccb784bc859a2d722697953117ccd587dccd1b45a8145.png" title=" Karen clicks on Name of student" width="1920"/>
+                <img src="d4c9b9822eb23f707a0fe3c008491b188ac2aa78b86e91cb1ba932e2f1f081c1.png" title=" Karen clicks on Name of student (completed)" width="1920"/>
+                <img src="8a7e3df5ea3aeb0140867b4ea99fb45bffe4b75bf7d8195b9fc0ccf610274829.png" title=" Karen clicks on Object" width="1920"/>
+                <img src="675fcb0d8b6b75e16fb734e47c57520d269a6459a497723e4f7f4b4ec77e7974.png" title=" Karen clicks on Object (completed)" width="1920"/>
+                <img src="675fcb0d8b6b75e16fb734e47c57520d269a6459a497723e4f7f4b4ec77e7974.png" title=" Karen enters 'Maths' then hits DOWN and ENTER into Object input" width="1920"/>
+                <img src="e28bec1c5f975d8fba5f72962522dec6309e4a0135fe7ba5d9dab28531b8d55d.png" title=" Karen enters 'Maths' then hits DOWN and ENTER into Object input (completed)" width="1920"/>
+                <img src="54223bf3898488efbd0532912511d6c54f4ddeffcb8cfc26c92d07f2e3d01fb3.png" title=" Karen enters 'C:\Users\DKREAM\Documents\GitHub\Prueba-Tecnica-Sr-QA\src\test\resources\images\MillionAndUp.png' into Name of student" width="1920"/>
+                <img src="976b758dd8470b35144d2c21b9e8e1f47ea09b71d138f3cfdde953bbdbb9c095.png" title=" Karen enters 'C:\Users\DKREAM\Documents\GitHub\Prueba-Tecnica-Sr-QA\src\test\resources\images\MillionAndUp.png' into Name of student (completed)" width="1920"/>
+                <img src="976b758dd8470b35144d2c21b9e8e1f47ea09b71d138f3cfdde953bbdbb9c095.png" title=" Karen enters 'calle 3 casa 4' into Name of student" width="1920"/>
+                <img src="d1548861a3ac499943375afdca29ea3eff63f5eb6c716412edfd5ee5ad9457f9.png" title=" Karen enters 'calle 3 casa 4' into Name of student (completed)" width="1920"/>
+                <img src="1be9b4237ffa71b71d8b02503327a92273bdeeb2d3eded49b825d1e7720684db.png" title=" Karen enters 'Uttar Pradesh' then hits DOWN and ENTER into Name of student" width="1920"/>
+                <img src="8de591514a1de193f1cfb5487d639e755a3591abef2a8f9917550d7a859584f6.png" title=" Karen enters 'Uttar Pradesh' then hits DOWN and ENTER into Name of student (completed)" width="1920"/>
+                <img src="8de591514a1de193f1cfb5487d639e755a3591abef2a8f9917550d7a859584f6.png" title=" Karen enters 'Lucknow' into Name of student" width="1920"/>
+                <img src="876c072cbc9bddf9f50aad61ee86f4528246cd42ea11706b372a1eaa518f3fc2.png" title=" Karen enters 'Lucknow' into Name of student (completed)" width="1920"/>
+                <img src="71f552d38fa5268016022800557d8bb628946ff7d3399d2afb6066dca01e52d2.png" title=" Karen fill out (completed)" width="1920"/>
+                <img src="71f552d38fa5268016022800557d8bb628946ff7d3399d2afb6066dca01e52d2.png" title=" When he enters all information
+| Karen | Agualimpia | kagualim@weel.com | Female | 3211234567 | Maths | Sports | February | 1995 | 08 | calle 3 casa 4 | Uttar Pradesh | Lucknow | MillionAndUp.png | (completed)" width="1920"/>
+                <img src="3e0a0939465dd484e1ed56af093ca03b5a107c0a239bba456231285ff1c008de.png" title=" Then he should see a submiting message" width="1920"/>
+                <img src="3e0a0939465dd484e1ed56af093ca03b5a107c0a239bba456231285ff1c008de.png" title=" Then validate if" width="1920"/>
+                <img src="3e0a0939465dd484e1ed56af093ca03b5a107c0a239bba456231285ff1c008de.png" title=" 1: Fill out the student registration form ({firstaName=Karen, lastName=Agualimpia, email=kagualim@weel.com, gender=Female, mobile=3211234567, subject=Maths, hobbie=Sports, month=February, year=1995, day=08, address=calle 3 casa 4, state=Uttar Pradesh, city=Lucknow, path=MillionAndUp.png}) (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.2.5</span>
+</div>
+</body>
+</html>
