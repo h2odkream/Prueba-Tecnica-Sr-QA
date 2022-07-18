@@ -1,4 +1,4 @@
-# Prueba-Tecnica-Sr-QA
+# Prueba Tecnica Sr QA
 
 Create a video for each test and send zip file. For test case please attach word file.
 
